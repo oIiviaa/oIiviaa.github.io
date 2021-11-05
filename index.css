@@ -1,0 +1,271 @@
+* {box-sizing: border-box}
+
+body, html {
+ 
+  margin: 0;
+  font-family: Arial;
+}
+
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+}
+
+#Home {background-color: teal;}
+#Donate {background-color: teal;}
+#Contact {background-color: teal;}
+#About {background-color: teal;}
+
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+.slideshow-container {
+  max-width: 700px;
+  position: relative;
+  margin: auto;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+#more {display: none;}
+
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 50px;
+    text-align: center;
+    font-size: 25px;
+    cursor: pointer;
+    color: white;
+  }
+  
+  .containerTab {
+    padding: 20px;
+    color: white;
+  }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  .closebtn {
+    float: right;
+    color: white;
+    font-size: 35px;
+    cursor: pointer;
+  }
+
+ #cat {
+    text-align: center;
+}
+
+form {
+    border: 3px solid #555;
+    font-family: Arial;
+  }
+  
+  .container {
+    padding: 20px;
+    background-color: #555;
+  }
+  
+  input[type=text], input[type=submit] {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #555;
+    box-sizing: border-box;
+  }
+  
+  input[type=submit] {
+    background-color: #04AA6D;
+    color: white;
+    border: none;
+  }
+  
+  input[type=submit]:hover {
+    opacity: 0.8;
+  }
+
+  .hide {
+    display: none;
+  }
+      
+  .myDIV:hover + .hide {
+    display: block;
+    color: rgb(0, 0, 0);
+  }
+
+  .alert {
+    padding: 20px;
+    background-color: #04AA6D;
+    color: white;
+  }
+  
+  .closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .closebtn:hover {
+    color: black;
+  }
+
+.open-button {
+    background-color: #555;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    opacity: 0.8;
+    position: fixed;
+    bottom: 23px;
+    right: 28px;
+    width: 280px;
+  }
+  
+  .chat-popup {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    right: 15px;
+    border: 3px solid #f1f1f1;
+    z-index: 9;
+  }
+  
+  .form-container {
+    max-width: 300px;
+    padding: 10px;
+    background-color: white;
+  }
+  
+  .form-container textarea {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+    resize: none;
+    min-height: 200px;
+  }
+  
+  .form-container textarea:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+  
+  .form-container .btn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom:10px;
+    opacity: 0.8;
+  }
+  
+  .form-container .cancel {
+    background-color: red;
+  }
+  
+  .form-container .btn:hover, .open-button:hover {
+    opacity: 1;
+  }
+
+  #chat {
+    color: black;
+  }
