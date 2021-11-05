@@ -1,1 +1,288 @@
-<h1>HI</h1>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="f3.css">
+    </head>
+    <body>
+        <button class="tablink" onclick="openPage('Home', this, 'teal')"id="defaultOpen">Home</button>
+        <button class="tablink" onclick="openPage('Donate', this, 'teal')">Donate</button>
+        <button class="tablink" onclick="openPage('Contact', this, 'teal')">Contact</button>
+        <button class="tablink" onclick="openPage('About', this, 'teal')">About</button>
+       
+        <div id="Home" class="tabcontent">
+            <h1>Climate Hub</h1>
+           <p>Want to learn about climate change and what you can do to stop it? This is the place for you!</p>
+            <div class="slideshow-container">
+
+                <div class="mySlides fade">
+                  <div class="numbertext">1 / 3</div>
+                  <img src="https://www.nationalgrid.com/sites/default/files/images/PolarBearWithCubOnSeaIce_640x360.jpg" style="width:100%">
+                </div>
+                
+                <div class="mySlides fade">
+                  <div class="numbertext">2 / 3</div>
+                  <img src="https://ichef.bbci.co.uk/news/976/cpsprodpb/14D7/production/_115653350_hope1.png" style="width:100%">
+                </div>
+                
+                <div class="mySlides fade">
+                  <div class="numbertext">3 / 3</div>
+                  <img src="https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Fa721e79f-37a6-4544-b704-fe8957475406.jpg?fit=scale-down&source=next&width=700" 
+                  style="width:100%">
+                </div>
+                
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                
+                </div>
+                <br>
+                
+                <div style="text-align:center">
+                  <span class="dot" onclick="currentSlide(1)"></span> 
+                  <span class="dot" onclick="currentSlide(2)"></span> 
+                  <span class="dot" onclick="currentSlide(3)"></span> 
+                </div>
+                
+                <script>
+                var slideIndex = 1;
+                showSlides(slideIndex);
+                
+                function plusSlides(n) {
+                  showSlides(slideIndex += n);
+                }
+                
+                function currentSlide(n) {
+                  showSlides(slideIndex = n);
+                }
+                
+                function showSlides(n) {
+                  var i;
+                  var slides = document.getElementsByClassName("mySlides");
+                  var dots = document.getElementsByClassName("dot");
+                  if (n > slides.length) {slideIndex = 1}    
+                  if (n < 1) {slideIndex = slides.length}
+                  for (i = 0; i < slides.length; i++) {
+                      slides[i].style.display = "none";  
+                  }
+                  for (i = 0; i < dots.length; i++) {
+                      dots[i].className = dots[i].className.replace(" active", "");
+                  }
+                  slides[slideIndex-1].style.display = "block";  
+                  dots[slideIndex-1].className += " active";
+                }
+                </script>    
+                
+                <div class="myDIV">Would you like to donate to a charity whose trying to curb the effects of climate change?</div>
+                <div class="hide">Check out our donate page!</div>
+                <button class="open-button" onclick="openForm()">Chat</button>
+
+<div class="chat-popup" id="myForm">
+  <form action="/action_page.php" class="form-container">
+    <h1 id="chat">Chat</h1>
+
+    <label for="msg"><b>Message</b></label>
+    <textarea placeholder="Type message.." name="msg" required></textarea>
+
+    <button type="submit" class="btn">Send</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+
+<script>
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+</script>
+        </div>
+       
+        <div id="Donate" class="tabcontent">
+            <h1>Donate</h1>
+            <h3>Charities of the week:</h3>
+            <div style="text-align:center">
+              </div>
+              <div class="row">
+                <div class="column" onclick="openTab('b1');" style="background:rgb(122, 177, 177);">
+                  Coalition for Rainforest Nations
+                </div>
+                <div class="column" onclick="openTab('b2');" style="background:rgb(138, 177, 122);">
+                  Clean Air Task<br>Force
+                </div>
+                <div class="column" onclick="openTab('b3');" style="background:rgb(122, 144, 177);">
+                  The Climate <br>Coalition
+                </div>
+              </div>
+              
+              <div id="b1" class="containerTab" style="display:none;background:rgb(122, 177, 177)">
+                <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+                <h2>Coalition for Rainforest Nations</h2>
+                <h4>What they do:</h4>
+                <p>This charity helps protect rainforests by ensuring that developmenting countries get paid if they show that they have been 
+                    preventing deforestation and environmental degradation. This helps climate change as deforestation is one of the biggest causes of climate change. They played a big role in 
+                    securing the agreement on forestry for the Paris Climate Agreement and have helped greatly reduce emissions from deforestation.
+                </p>
+                <h4>
+                    <a href=" https://www.rainforestcoalition.org/donations/" target="_blank" title="Donation page">Donate here!</a>
+                </h4>
+                <h4>
+                    <a href="https://www.rainforestcoalition.org/" target="_blank" title="About page">
+                    Read more about Coalition for Rainforest Nations here!</a>
+                </h4>
+              </div>
+              
+              <div id="b2" class="containerTab" style="display:none;background: rgb(138, 177, 122)">
+                <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+                <h2>Clean Air Task Force</h2>
+                <h4>What they do:</h4>
+                <p>This charity helps to reduce air pollution caused by coal-fired power plants in the US. They have also helped
+                    limit CO2 emissions from the US power sector and helped establish regulations of diesal, shipping and 
+                    methane emissions.
+                </p>
+                <h4>
+                    <a href="https://www.catf.us/donate/" target="_blank" title="Donation page">Donate here!</a>
+                </h4>
+                <h4>
+                    <a href="https://www.catf.us/" target="_blank" title="About page">Read more about Clean Air Task Force here!</a>
+                </h4>
+              </div>
+              
+              <div id="b3" class="containerTab" style="display:none;background:rgb(122, 144, 177)">
+                <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+                <h2>The Climate Coalition</h2>
+                <h4>What they do:</h4>
+                <p>This charity raises awareness for climate change and brings focus to renewable alternatives that 
+                    can be used in order to reduce carbon emissions. They were together with the public in order to 
+                    get politicians to do something about climate change.
+                </p>
+                <h4>
+                    <a href="https://www.theclimatecoalition.org/donate" target="_blank" title="Donation page">Donate here!</a>
+                </h4>
+                <h4>
+                    <a href="https://www.theclimatecoalition.org/" target="_blank" title="About page">Read more about The Climate Coalition here!</a>
+                </h4>
+              </div>
+              
+              <script>
+              function openTab(tabName) {
+                var i, x;
+                x = document.getElementsByClassName("containerTab");
+                for (i = 0; i < x.length; i++) {
+                  x[i].style.display = "none";
+                }
+                document.getElementById(tabName).style.display = "block";
+              }
+              </script>
+           <p id="cat">Check back in every week to find more charities tackling climate change and its impacts!</p>
+           <form action="/action_page.php">
+            <div class="container">
+              <h2>Sign up here!</h2>
+              <p>To be reminded when new charities are added sign up below.</p>
+            </div>
+          
+            <div class="container" style="background-color:white">
+              <input type="text" placeholder="Name" name="name" >
+              <input type="text" placeholder="Email address" name="mail">
+              <label>
+            </div>
+          
+            <div class="container">
+              <input type="submit" value="Subscribe">
+              <div class="alert">
+                <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+                <strong>YAY!</strong> We will send you an email when the charities change!
+              </div>
+            </div>
+          </form>
+         
+        </div>
+       
+        <div id="Contact" class="tabcontent">
+            <h1>How to contact us</h1>
+            <h3>Contact details:</h3>
+            <p>Email address: climatehub@gmail.com <br>Phone number: 07123456789 
+                <br></p>
+    
+            <h3>Call times:</h3>
+            <p>Monday-Friday 9:00-17:30<br>Saturday-Sunday 10:00-18:00<br></p>
+            <h3>Send us a letter:</h3>
+            <p>Climate Hub<br>12 Climate Street<br>Durham<br>AB12 3CD<br>United Kingdom
+            </p>
+            <h3>Enter you email address below to sign up to our weekly newsletter:</h3>
+    
+            <div class="enteremail">
+                <label for="Email">Email:</label>
+                <input type="text" id="email" name="email">
+                <br>
+                <br>
+                <input type="submit" value="Submit">
+            </div>
+        </div>
+        
+        <div id="About" class="tabcontent">
+            <h1>About us</h1>
+            <h3>Who are we?</h3>
+            <p>Climate Hub is a place to help people looking to find out more about climate change and
+                how they can help reduce the impacts of it. We help to direct you to charities working
+                in the fight against climate change and offer information on current climate issues.
+            </p>
+            <h3>What is climate change?</h3>
+            <p>Climate change refers to long-term shifts in temperatures and weather patterns. 
+                These shifts may be naturual but human activities, like burning fossil fuels,
+            have been the main cause since the 1800s.</p>
+            <h3>What can we do to help?</h3>
+            <p>- Visit our donation page to find out more about charities that are trying to tackle 
+                climate change and donate.<br>- Research the effects on climate change here on Climate Hub.<br>
+                - Sign up for our weekly newslater on our contact page to stay up to date with 
+                current climate issues.<br>- Start making small changes in your daily life to help combat the effects 
+                of climate change.<br>- Share our page to help raise awareness for climate change and direct 
+                people to trustworthy charities.
+            </p>
+            <p>Climate change is causing global temperatures to rise, resulting in more extreme weather patterns across 
+                the globe. This is threatening<span id="dots">...</span><span id="more"> the stability and security in 
+                many people's lives and leaving the environment in horrific conditions. We ask you to do all you can to 
+                help in the fight against climate change. Even the smallest of changes can help, like swapping out 
+                liquid soap for soap bars or using renewable energy (solar panels). If you can, we please ask you to 
+                donate to one of the many charities listed on Climate Hub as even £1 will make a difference against the 
+                effects of climate change.
+                </span></p>
+                <button onclick="myFunction()" id="myBtn">Read more</button>
+                <script>
+                function myFunction() {
+                    var dots = document.getElementById("dots");
+                    var moreText = document.getElementById("more");
+                    var btnText = document.getElementById("myBtn");
+                    
+                    if (dots.style.display === "none") {
+                        dots.style.display = "inline";
+                        btnText.innerHTML = "Read more"; 
+                        moreText.style.display = "none";
+                    } else {
+                         dots.style.display = "none";
+                         btnText.innerHTML = "Read less"; 
+                         moreText.style.display = "inline";
+                    }
+                    }
+                </script>
+        </div>
+        <script>
+        function openPage(pageName,elmnt,color) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none"; 
+            }
+            tablinks = document.getElementsByClassName("tablink");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].style.backgroundColor = "";
+            }
+            document.getElementById(pageName).style.display = "block";
+            elmnt.style.backgroundColor = color;
+        }
+
+        document.getElementById("defaultOpen").click();
+        </script>
+    </body>
+</html>
