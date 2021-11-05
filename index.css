@@ -182,12 +182,6 @@ form {
     display: block;
     color: rgb(0, 0, 0);
   }
-
-  .alert {
-    padding: 20px;
-    background-color: #04AA6D;
-    color: white;
-  }
   
   .closebtn {
     margin-left: 15px;
